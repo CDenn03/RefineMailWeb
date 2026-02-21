@@ -24,7 +24,7 @@ export default function Home() {
     <>
       <Navigation />
       <Hero />
-      <Stats />
+      {/* <Stats /> */}
       <StyleDemo />
       <ProblemSolution />
       <HowItWorks />

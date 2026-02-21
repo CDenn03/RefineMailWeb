@@ -29,7 +29,7 @@ export default function Navigation() {
         <li><a href="#pricing" className="text-sm font-medium text-white/80 no-underline transition-colors hover:text-white">Pricing</a></li>
         <li><a href="#faq" className="text-sm font-medium text-white/80 no-underline transition-colors hover:text-white">FAQ</a></li>
         <li>
-          <a href="#" className="bg-white text-[#0f2a44] px-5 py-2.5 rounded-full font-semibold shadow-[0_4px_14px_rgba(255,255,255,0.25)] transition-all hover:bg-cream hover:-translate-y-px hover:shadow-[0_6px_20px_rgba(255,255,255,0.35)] no-underline">
+          <a href="#" className="bg-white text-navyblue px-5 py-2.5 rounded-full font-semibold shadow-[0_4px_14px_rgba(255,255,255,0.25)] transition-all hover:bg-cream hover:-translate-y-px hover:shadow-[0_6px_20px_rgba(255,255,255,0.35)] no-underline">
             Add to Chrome
           </a>
         </li>

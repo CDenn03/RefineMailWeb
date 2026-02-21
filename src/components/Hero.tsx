@@ -1,6 +1,6 @@
 export default function Hero() {
   return (
-    <section className="min-h-screen flex items-center px-[5%] pt-[120px] pb-20 relative overflow-hidden bg-navy max-md:pt-[100px]" id="hero">
+    <section className="min-h-[calc(100vh-100px)] flex items-center px-[5%] pt-[120px] pb-20 relative overflow-hidden bg-navy max-md:pt-[100px]" id="hero">
       <div className="absolute inset-0 bg-linear-to-br from-navy-4 via-navy to-navy-2 z-0" />
       <div className="absolute w-[600px] h-[600px] rounded-full blur-[80px] opacity-20 pointer-events-none bg-gold top-[-200px] right-[-100px] animate-float1" />
       <div className="absolute w-[400px] h-[400px] rounded-full blur-[80px] opacity-15 pointer-events-none bg-[#5b9bd5] bottom-[-100px] left-[-80px] animate-float2" />
@@ -17,7 +17,7 @@ export default function Hero() {
             Turn one draft into perfectly-toned messages in seconds. From formal authority to casual warmth, AI Email Refiner adapts your message for any situation.
           </p>
           <div className="flex gap-3.5 flex-wrap mb-8 animate-fadeInUp [animation-delay:0.3s] max-lg:justify-center max-md:gap-2.5 max-md:mb-6">
-            <a href="#" className="bg-white text-[#0f2a44] text-[0.95rem] font-bold px-7 py-3.5 rounded-full border-none cursor-pointer no-underline inline-flex items-center gap-2 shadow-[0_6px_24px_rgba(255,255,255,0.3)] transition-all hover:-translate-y-0.5 hover:shadow-[0_10px_30px_rgba(255,255,255,0.4)] hover:bg-cream max-md:text-[0.85rem] max-md:px-5 max-md:py-3">
+            <a href="#" className="bg-white text-navyblue text-[0.95rem] font-bold px-7 py-3.5 rounded-full border-none cursor-pointer no-underline inline-flex items-center gap-2 shadow-[0_6px_24px_rgba(255,255,255,0.3)] transition-all hover:-translate-y-0.5 hover:shadow-[0_10px_30px_rgba(255,255,255,0.4)] hover:bg-cream max-md:text-[0.85rem] max-md:px-5 max-md:py-3">
               Add to Chrome — It&apos;s Free
             </a>
             <a href="#demo" className="bg-white/10 text-white text-[0.95rem] font-medium px-7 py-3.5 rounded-full border border-white/30 cursor-pointer no-underline inline-flex items-center gap-2 backdrop-blur-sm transition-all hover:bg-white/20 hover:border-white/50 max-md:text-[0.85rem] max-md:px-5 max-md:py-3">

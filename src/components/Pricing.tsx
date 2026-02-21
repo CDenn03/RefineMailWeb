@@ -42,13 +42,13 @@ export default function Pricing() {
               </li>
             ))}
           </ul>
-          <button className="w-full px-3.5 py-3.5 rounded-xl font-bold text-[0.9rem] cursor-pointer border-2 border-white bg-transparent text-white tracking-wide transition-all hover:bg-white hover:border-white hover:text-[#0f2a44]">
+          <button className="w-full px-3.5 py-3.5 rounded-xl font-bold text-[0.9rem] cursor-pointer border-2 border-white bg-transparent text-white tracking-wide transition-all hover:bg-white hover:border-white hover:text-navyblue">
             Start Free
           </button>
         </div>
 
         <div className="bg-gradient-to-br from-orange to-orange-2 border-2 border-orange rounded-[24px] px-7 py-9 relative scale-[1.04]   max-lg:scale-100">
-          <div className="absolute top-[-14px] left-1/2 -translate-x-1/2 bg-white text-[#0f2a44] text-[0.72rem] font-extrabold px-4 py-1 rounded-full tracking-wider uppercase whitespace-nowrap shadow-lg">
+          <div className="absolute top-[-14px] left-1/2 -translate-x-1/2 bg-white text-navyblue text-[0.72rem] font-extrabold px-4 py-1 rounded-full tracking-wider uppercase whitespace-nowrap shadow-lg">
             Most Popular
           </div>
           <div className="font-heading text-base font-bold mb-1 text-white">Pro</div>
@@ -62,7 +62,7 @@ export default function Pricing() {
               </li>
             ))}
           </ul>
-          <button className="w-full px-3.5 py-3.5 rounded-xl font-bold text-[0.9rem] cursor-pointer border-none bg-white text-[#0f2a44] tracking-wide shadow-[0_6px_20px_rgba(255,255,255,0.3)] transition-all hover:-translate-y-0.5 hover:shadow-[0_10px_30px_rgba(255,255,255,0.4)] hover:scale-105">
+          <button className="w-full px-3.5 py-3.5 rounded-xl font-bold text-[0.9rem] cursor-pointer border-none bg-white text-navyblue tracking-wide shadow-[0_6px_20px_rgba(255,255,255,0.3)] transition-all hover:-translate-y-0.5 hover:shadow-[0_10px_30px_rgba(255,255,255,0.4)] hover:scale-105">
             Get Pro Now
           </button>
         </div>
@@ -79,7 +79,7 @@ export default function Pricing() {
               </li>
             ))}
           </ul>
-          <button className="w-full px-3.5 py-3.5 rounded-xl font-bold text-[0.9rem] cursor-pointer border-2 border-white bg-transparent text-white tracking-wide transition-all hover:bg-white hover:border-white hover:text-[#0f2a44]">
+          <button className="w-full px-3.5 py-3.5 rounded-xl font-bold text-[0.9rem] cursor-pointer border-2 border-white bg-transparent text-white tracking-wide transition-all hover:bg-white hover:border-white hover:text-navyblue">
             Contact Sales
           </button>
         </div>

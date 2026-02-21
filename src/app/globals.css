@@ -26,6 +26,12 @@
   }
 }
 
+@layer utilities {
+  .text-navyblue {
+    color: #0f2a44;
+  }
+}
+
 html {
   scroll-behavior: smooth;
 }

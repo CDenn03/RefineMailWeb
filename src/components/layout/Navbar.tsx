@@ -2,7 +2,7 @@
 
 import { useEffect } from 'react'
 
-export default function Navigation() {
+export default function Navbar() {
   useEffect(() => {
     const handleScroll = () => {
       const nav = document.getElementById('navbar')

@@ -26,11 +26,11 @@ export default function FAQ() {
           {faqs.map((faq, i) => (
             <div key={i} className="border-b border-[#f1f5f9]">
               <button
-                className="w-full bg-transparent border-none text-left py-5 text-[0.925rem] font-semibold text-[#0f172a] cursor-pointer flex items-center justify-between gap-4 transition-colors hover:text-[#2563eb] outline-none"
+                className="w-full bg-transparent border-none text-left py-5 text-[0.925rem] font-semibold text-[#0f172a] cursor-pointer flex items-center justify-between gap-4 transition-colors hover:text-[#124170] outline-none"
                 onClick={() => setOpenFaq(openFaq === i ? null : i)}
               >
                 {faq.q}
-                <span className={`w-7 h-7 rounded-full flex items-center justify-center shrink-0 text-xs transition-all ${openFaq === i ? 'bg-[#2563eb] text-white rotate-180' : 'bg-[#f1f5f9] text-[#64748b]'}`}>
+                <span className={`w-7 h-7 rounded-full flex items-center justify-center shrink-0 text-xs transition-all ${openFaq === i ? 'bg-[#0f2a44] text-white rotate-180' : 'bg-[#f1f5f9] text-[#64748b]'}`}>
                   <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
                     <polyline points="6 9 12 15 18 9"/>
                   </svg>

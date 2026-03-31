@@ -11,7 +11,7 @@ export default function Pricing() {
   const teamPeriod = isAnnual ? 'per month · 5 users, billed annually' : 'per month · 5 users'
 
   return (
-    <section className="px-[5%] py-28 bg-white" id="pricing">
+    <section className="px-[5%] py-28 bg-[#f5f6f8]" id="pricing">
       <div className="max-w-[1320px] mx-auto">
         <div className="section-label">Pricing</div>
         <h2 className="text-[clamp(1.75rem,3.5vw,2.75rem)] font-extrabold text-[#0f172a] leading-[1.15] tracking-[-0.025em] mb-3 max-w-[380px]">
@@ -25,8 +25,8 @@ export default function Pricing() {
         <div className="flex items-center gap-3 mb-12 text-[0.875rem]">
           <span className={`font-medium ${!isAnnual ? 'text-[#0f172a]' : 'text-[#94a3b8]'}`}>Monthly</span>
           <button
-            className="w-12 h-6 bg-[#e2e8f0] rounded-full relative cursor-pointer border-none outline-none transition-colors"
-            style={{ background: isAnnual ? '#2563eb' : '#e2e8f0' }}
+            className="w-12 h-6 rounded-full relative cursor-pointer border-none outline-none transition-colors"
+            style={{ background: isAnnual ? '#0f2a44' : '#e2e8f0' }}
             onClick={() => setIsAnnual(!isAnnual)}
           >
             <div className={`absolute top-0.5 left-0.5 w-5 h-5 bg-white rounded-full transition-transform shadow-sm ${isAnnual ? 'translate-x-6' : ''}`} />
@@ -44,22 +44,22 @@ export default function Pricing() {
             <ul className="list-none mb-8 flex flex-col gap-3">
               {['50 email refinements/month', 'All 7 writing styles', 'Gmail & Zimbra support', 'Real-time preview', 'One-click apply'].map(f => (
                 <li key={f} className="flex items-center gap-2.5 text-[0.875rem] font-normal text-[#475569]">
-                  <span className="w-4 h-4 rounded-full bg-[#eff6ff] flex items-center justify-center shrink-0">
-                    <svg className="w-2.5 h-2.5 text-[#2563eb]" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="2 6 5 9 10 3"/></svg>
+                  <span className="w-4 h-4 rounded-full bg-[#eef3f8] flex items-center justify-center shrink-0">
+                    <svg className="w-2.5 h-2.5 text-[#124170]" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="2 6 5 9 10 3"/></svg>
                   </span>
                   {f}
                 </li>
               ))}
             </ul>
-            <button className="w-full py-3 rounded-xl font-semibold text-[0.875rem] cursor-pointer border-2 border-[#e8ecf4] bg-white text-[#334155] tracking-[-0.01em] transition-all hover:border-[#2563eb] hover:text-[#2563eb]">
+            <button className="w-full py-3 rounded-xl font-semibold text-[0.875rem] cursor-pointer border-2 border-[#dde3ea] bg-white text-[#334155] tracking-[-0.01em] transition-all hover:border-[#124170] hover:text-[#124170]">
               Start Free
             </button>
           </div>
 
           {/* Pro — featured */}
-          <div className="relative rounded-[22px] overflow-hidden shadow-[0_8px_40px_rgba(37,99,235,0.22)]" style={{ transform: 'scale(1.03)' }}>
-            <div className="absolute top-0 left-0 right-0 h-1 bg-linear-to-r from-[#2563eb] to-[#7c3aed]" />
-            <div className="bg-[#1e3a8a] px-7 py-8">
+          <div className="relative rounded-[22px] overflow-hidden shadow-[0_8px_40px_rgba(15,42,68,0.22)]" style={{ transform: 'scale(1.03)' }}>
+            <div className="absolute top-0 left-0 right-0 h-1 bg-linear-to-r from-[#0f2a44] to-[#1a5a8a]" />
+            <div className="bg-[#0f2a44] px-7 py-8">
               <div className="absolute top-4 right-5 bg-white/15 text-white text-[0.68rem] font-bold px-3 py-1 rounded-full tracking-[0.06em] uppercase">
                 Most Popular
               </div>
@@ -76,7 +76,7 @@ export default function Pricing() {
                   </li>
                 ))}
               </ul>
-              <button className="w-full py-3 rounded-xl font-bold text-[0.875rem] cursor-pointer border-none bg-white text-[#1e3a8a] tracking-[-0.01em] shadow-[0_4px_16px_rgba(255,255,255,0.2)] transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(255,255,255,0.3)]">
+              <button className="w-full py-3 rounded-xl font-bold text-[0.875rem] cursor-pointer border-none bg-white text-[#0f2a44] tracking-[-0.01em] shadow-[0_4px_16px_rgba(255,255,255,0.2)] transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_24px_rgba(255,255,255,0.3)]">
                 Get Pro Now
               </button>
             </div>
@@ -90,14 +90,14 @@ export default function Pricing() {
             <ul className="list-none mb-8 flex flex-col gap-3">
               {['Everything in Pro', 'Team style templates', 'Usage analytics', 'Centralized billing', 'Dedicated support', 'Onboarding assistance'].map(f => (
                 <li key={f} className="flex items-center gap-2.5 text-[0.875rem] font-normal text-[#475569]">
-                  <span className="w-4 h-4 rounded-full bg-[#eff6ff] flex items-center justify-center shrink-0">
-                    <svg className="w-2.5 h-2.5 text-[#2563eb]" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="2 6 5 9 10 3"/></svg>
+                  <span className="w-4 h-4 rounded-full bg-[#eef3f8] flex items-center justify-center shrink-0">
+                    <svg className="w-2.5 h-2.5 text-[#124170]" viewBox="0 0 12 12" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><polyline points="2 6 5 9 10 3"/></svg>
                   </span>
                   {f}
                 </li>
               ))}
             </ul>
-            <button className="w-full py-3 rounded-xl font-semibold text-[0.875rem] cursor-pointer border-2 border-[#e8ecf4] bg-white text-[#334155] tracking-[-0.01em] transition-all hover:border-[#2563eb] hover:text-[#2563eb]">
+            <button className="w-full py-3 rounded-xl font-semibold text-[0.875rem] cursor-pointer border-2 border-[#dde3ea] bg-white text-[#334155] tracking-[-0.01em] transition-all hover:border-[#124170] hover:text-[#124170]">
               Contact Sales
             </button>
           </div>

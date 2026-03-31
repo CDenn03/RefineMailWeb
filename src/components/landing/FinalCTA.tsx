@@ -1,9 +1,8 @@
 export default function FinalCTA() {
   return (
-    <section className="px-[5%] py-28 bg-[#f5f7ff] relative overflow-hidden">
-      <div className="absolute w-[500px] h-[500px] rounded-full bg-[#2563eb] opacity-[0.07] blur-[120px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
+    <section className="px-[5%] py-28 bg-white relative overflow-hidden">
+      <div className="absolute w-[500px] h-[500px] rounded-full bg-[#0f2a44] opacity-[0.05] blur-[120px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
       <div className="max-w-[1320px] mx-auto relative z-10">
-        {/* CTA card */}
         <div className="card px-12 py-16 text-center max-w-[760px] mx-auto max-md:px-7 max-md:py-10">
           <div className="section-label justify-center">Get Started</div>
           <h2 className="text-[clamp(1.75rem,3.5vw,2.75rem)] font-extrabold text-[#0f172a] leading-[1.15] tracking-[-0.025em] mb-4">
@@ -13,10 +12,10 @@ export default function FinalCTA() {
             Join 10,000+ professionals who write better emails every day.
           </p>
           <div className="flex gap-3 justify-center flex-wrap mb-9">
-            <a href="#" className="bg-[#2563eb] text-white text-[0.9rem] font-semibold px-7 py-3.5 rounded-full border-none cursor-pointer no-underline inline-flex items-center gap-2 shadow-[0_4px_20px_rgba(37,99,235,0.38)] transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_28px_rgba(37,99,235,0.48)] hover:bg-[#1d4ed8]">
-              Add to Chrome — Free
+            <a href="#" className="bg-[#0f2a44] text-white text-[0.9rem] font-semibold px-7 py-3.5 rounded-full border-none cursor-pointer no-underline inline-flex items-center gap-2 shadow-[0_4px_20px_rgba(15,42,68,0.38)] transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_28px_rgba(15,42,68,0.48)] hover:bg-[#124170]">
+              Coming soon to Chrome
             </a>
-            <a href="#demo" className="bg-white text-[#334155] text-[0.9rem] font-medium px-7 py-3.5 rounded-full border border-[#e8ecf4] cursor-pointer no-underline inline-flex items-center gap-2 shadow-[0_2px_8px_rgba(0,0,0,0.05)] transition-all hover:border-[#2563eb]/40 hover:shadow-[0_4px_16px_rgba(37,99,235,0.1)]">
+            <a href="#demo" className="bg-white text-[#334155] text-[0.9rem] font-medium px-7 py-3.5 rounded-full border border-[#dde3ea] cursor-pointer no-underline inline-flex items-center gap-2 shadow-[0_2px_8px_rgba(0,0,0,0.05)] transition-all hover:border-[#124170]/40 hover:shadow-[0_4px_16px_rgba(18,65,112,0.1)]">
               View Demo First
             </a>
           </div>

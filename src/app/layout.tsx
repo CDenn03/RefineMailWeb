@@ -4,6 +4,10 @@ import './globals.css'
 export const metadata: Metadata = {
   title: 'AI Email Refiner – Write Better Emails in Seconds',
   description: 'Transform your email drafts with AI. 7 writing styles, Gmail & Zimbra support. Join 10,000+ professionals writing better emails instantly.',
+  icons: {
+    icon: '/favicon.png',
+    apple: '/favicon.png',
+  },
   openGraph: {
     title: 'AI Email Refiner – Write Better Emails in Seconds',
     description: 'AI-powered Chrome extension that rewrites your emails in 7 styles.',

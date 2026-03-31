@@ -1,5 +1,5 @@
 const iconColors = [
-  { bg: '#eff6ff', color: '#2563eb' },
+  { bg: '#eef3f8', color: '#124170' },
   { bg: '#f0fdf4', color: '#16a34a' },
   { bg: '#fdf4ff', color: '#9333ea' },
   { bg: '#fff7ed', color: '#ea580c' },
@@ -20,7 +20,7 @@ export default function UseCases() {
   const emojis = ['📈', '🎧', '💼', '🌍', '🧑‍💻', '📝']
 
   return (
-    <section className="px-[5%] py-28 bg-white">
+    <section className="px-[5%] py-28 bg-[#f5f6f8]">
       <div className="max-w-[1320px] mx-auto">
         <div className="section-label">Who it&apos;s for</div>
         <h2 className="text-[clamp(1.75rem,3.5vw,2.75rem)] font-extrabold text-[#0f172a] leading-[1.15] tracking-[-0.025em] mb-3 max-w-[420px]">

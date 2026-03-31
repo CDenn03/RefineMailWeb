@@ -1,12 +1,12 @@
 export default function Testimonials() {
   const testimonials = [
-    ['SK', 'Sarah K.', 'VP of Sales, TechCorp', 5, 'linear-gradient(135deg, #2563eb, #1d4ed8)', 'AI Email Refiner saved me at least 2 hours a day. I used to agonize over every email before sending — now I draft quickly, hit refine, and send confidently. It\'s become as essential as spell-check.'],
+    ['SK', 'Sarah K.', 'VP of Sales, TechCorp', 5, 'linear-gradient(135deg, #0f2a44, #124170)', 'AI Email Refiner saved me at least 2 hours a day. I used to agonize over every email before sending — now I draft quickly, hit refine, and send confidently. It\'s become as essential as spell-check.'],
     ['MR', 'Marcus R.', 'Head of CX, SaaS Platform', 5, 'linear-gradient(135deg, #10b981, #059669)', 'Our customer support team uses it constantly. Response quality went up and customer satisfaction scores followed. The \'apologetic\' style alone has de-escalated so many difficult situations.'],
     ['PT', 'Priya T.', 'UX Consultant, Freelance', 4, 'linear-gradient(135deg, #7c3aed, #6d28d9)', 'As a freelancer working with international clients, matching the right tone was always stressful. Now I just pick the right style and go. Total game changer.'],
   ]
 
   return (
-    <section className="px-[5%] py-28 bg-[#f5f7ff]">
+    <section className="px-[5%] py-28 bg-white">
       <div className="max-w-[1320px] mx-auto">
         <div className="section-label">Social Proof</div>
         <h2 className="text-[clamp(1.75rem,3.5vw,2.75rem)] font-extrabold text-[#0f172a] leading-[1.15] tracking-[-0.025em] mb-14 max-w-[440px]">
@@ -15,7 +15,6 @@ export default function Testimonials() {
         <div className="grid grid-cols-3 gap-5 max-lg:grid-cols-2 max-md:grid-cols-1">
           {testimonials.map(([initials, name, title, stars, bg, text], i) => (
             <div key={i} className={`card px-6 py-7 reveal reveal-delay-${i}`}>
-              {/* Stars */}
               <div className="flex gap-0.5 mb-4">
                 {Array.from({ length: 5 }).map((_, s) => (
                   <svg key={s} className={`w-4 h-4 ${s < (stars as number) ? 'text-amber-400' : 'text-slate-200'}`} fill="currentColor" viewBox="0 0 20 20">

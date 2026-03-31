@@ -6,7 +6,7 @@ export default function HowItWorks() {
   ]
 
   return (
-    <section className="px-[5%] py-28 bg-[#f5f7ff]" id="how">
+    <section className="px-[5%] py-28 bg-[#f5f6f8]" id="how">
       <div className="max-w-[1320px] mx-auto">
         <div className="section-label">Process</div>
         <h2 className="text-[clamp(1.75rem,3.5vw,2.75rem)] font-extrabold text-[#0f172a] leading-[1.15] tracking-[-0.025em] mb-3 max-w-[420px]">
@@ -18,11 +18,10 @@ export default function HowItWorks() {
         <div className="grid grid-cols-3 gap-5 max-lg:grid-cols-1">
           {steps.map(([num, title, desc], i) => (
             <div key={i} className={`card px-7 py-8 relative reveal ${i > 0 ? `reveal-delay-${i}` : ''}`}>
-              {/* Step number — large faint background */}
-              <div className="text-[3.5rem] font-extrabold text-[#2563eb]/8 leading-none absolute top-5 right-6 select-none tracking-[-0.04em]">
+              <div className="text-[3.5rem] font-extrabold text-[#0f2a44]/8 leading-none absolute top-5 right-6 select-none tracking-[-0.04em]">
                 {num}
               </div>
-              <div className="w-11 h-11 rounded-[12px] bg-[#2563eb] flex items-center justify-center mb-6 shadow-[0_4px_12px_rgba(37,99,235,0.3)]">
+              <div className="w-11 h-11 rounded-[12px] bg-[#0f2a44] flex items-center justify-center mb-6 shadow-[0_4px_12px_rgba(15,42,68,0.3)]">
                 <span className="text-white font-extrabold text-[0.95rem]">{num}</span>
               </div>
               <div className="text-[1rem] font-bold text-[#0f172a] mb-2.5 tracking-[-0.01em]">{title}</div>

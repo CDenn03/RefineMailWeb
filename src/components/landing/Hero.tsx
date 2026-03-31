@@ -4,16 +4,14 @@ export default function Hero() {
   return (
     <section className="min-h-[calc(100vh-64px)] flex items-center px-[5%] pt-[110px] pb-20 relative overflow-hidden bg-white max-md:pt-[96px]" id="hero">
       {/* Soft background blobs */}
-      <div className="absolute w-[640px] h-[640px] rounded-full blur-[140px] opacity-25 pointer-events-none bg-[#2563eb] top-[-180px] right-[-120px] animate-float1" />
-      <div className="absolute w-[380px] h-[380px] rounded-full blur-[100px] opacity-15 pointer-events-none bg-[#7c3aed] bottom-[-80px] left-[-60px] animate-float2" />
+      <div className="absolute w-[640px] h-[640px] rounded-full blur-[140px] opacity-20 pointer-events-none bg-[#124170] top-[-180px] right-[-120px] animate-float1" />
+      <div className="absolute w-[380px] h-[380px] rounded-full blur-[100px] opacity-10 pointer-events-none bg-[#0f2a44] bottom-[-80px] left-[-60px] animate-float2" />
       
       <div className="relative z-10 w-full max-w-[1320px] mx-auto grid grid-cols-2 gap-16 items-center max-lg:grid-cols-1 max-lg:gap-10">
         <div className="max-lg:text-center">
-
-
-          <h1 className="text-[clamp(2.1rem,5vw,3.75rem)] font-extrabold text-[#0f172a] leading-[1.08] tracking-[-0.03em] mb-5 animate-fadeInUp [animation-delay:0.1s]">
+          <h1 className="text-[clamp(2.6rem,6vw,4.1rem)] font-extrabold text-[#0f172a] leading-[1.08] tracking-[-0.03em] mb-5 animate-fadeInUp [animation-delay:0.1s]">
             Stop Rewriting Emails.<br />
-            Start <span className="text-[#2563eb]">Refining</span> Them.
+            Start <span className="text-[#124170]">Refining</span> Them.
           </h1>
 
           <p className="text-[clamp(0.95rem,1.8vw,1.1rem)] font-normal text-[#475569] leading-[1.75] mb-9 animate-fadeInUp [animation-delay:0.2s] max-md:mb-7">
@@ -21,10 +19,10 @@ export default function Hero() {
           </p>
 
           <div className="flex gap-3 flex-wrap mb-8 animate-fadeInUp [animation-delay:0.3s] max-lg:justify-center max-md:gap-2.5 max-md:mb-6">
-            <a href="#" className="bg-[#2563eb] text-white text-[0.9rem] font-semibold px-6 py-3 rounded-full border-none cursor-pointer no-underline inline-flex items-center gap-2 shadow-[0_4px_20px_rgba(37,99,235,0.38)] transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_28px_rgba(37,99,235,0.48)] hover:bg-[#1d4ed8] max-md:text-[0.85rem] max-md:px-5">
-              Add to Chrome — It&apos;s Free
+            <a href="#" className="bg-[#0f2a44] text-white text-[0.9rem] font-semibold px-6 py-3 rounded-full border-none cursor-pointer no-underline inline-flex items-center gap-2 shadow-[0_4px_20px_rgba(15,42,68,0.38)] transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_28px_rgba(15,42,68,0.48)] hover:bg-[#124170] max-md:text-[0.85rem] max-md:px-5">
+              Coming soon to Chrome
             </a>
-            <a href="#demo" className="bg-white text-[#334155] text-[0.9rem] font-medium px-6 py-3 rounded-full border border-[#e8ecf4] cursor-pointer no-underline inline-flex items-center gap-2 shadow-[0_2px_8px_rgba(0,0,0,0.05)] transition-all hover:border-[#2563eb]/40 hover:shadow-[0_4px_16px_rgba(37,99,235,0.1)] max-md:text-[0.85rem] max-md:px-5">
+            <a href="#demo" className="bg-white text-[#334155] text-[0.9rem] font-medium px-6 py-3 rounded-full border border-[#dde3ea] cursor-pointer no-underline inline-flex items-center gap-2 shadow-[0_2px_8px_rgba(0,0,0,0.05)] transition-all hover:border-[#124170]/40 hover:shadow-[0_4px_16px_rgba(18,65,112,0.1)] max-md:text-[0.85rem] max-md:px-5">
               See it in action →
             </a>
           </div>

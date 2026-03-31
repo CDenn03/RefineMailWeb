@@ -14,7 +14,7 @@ export default function ProblemSolution() {
   ]
 
   return (
-    <section className="px-[5%] py-28 bg-[#f5f7ff]" id="why">
+    <section className="px-[5%] py-28 bg-[#f5f6f8]" id="why">
       <div className="max-w-[1320px] mx-auto">
         <div className="section-label">The Problem</div>
         <h2 className="text-[clamp(1.75rem,3.5vw,2.75rem)] font-extrabold text-[#0f172a] leading-[1.15] tracking-[-0.025em] mb-14 max-w-[480px]">

@@ -11,7 +11,7 @@ export default function Footer() {
         <div className="grid grid-cols-[2fr_1fr_1fr_1fr] gap-12 mb-12 max-lg:grid-cols-2 max-md:grid-cols-1">
           <div>
             <a href="#" className="flex items-center gap-2.5 font-extrabold text-[1rem] text-white tracking-tight no-underline mb-4 w-fit" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
-              <div className="w-8 h-8 bg-[#2563eb] rounded-[10px] flex items-center justify-center shadow-[0_2px_8px_rgba(37,99,235,0.4)]">
+              <div className="w-8 h-8 bg-[#0f2a44] rounded-[10px] flex items-center justify-center shadow-[0_2px_8px_rgba(15,42,68,0.4)]">
                 <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
                   <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
                   <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
@@ -24,7 +24,7 @@ export default function Footer() {
             </p>
             <div className="flex gap-2">
               {['X', 'in', 'f', '▶'].map((s, i) => (
-                <a key={i} href="#" className="w-8 h-8 bg-white/[0.07] rounded-lg flex items-center justify-center text-[0.8rem] text-white/40 cursor-pointer no-underline transition-all hover:bg-[#2563eb]/30 hover:text-blue-300">
+                <a key={i} href="#" className="w-8 h-8 bg-white/[0.07] rounded-lg flex items-center justify-center text-[0.8rem] text-white/40 cursor-pointer no-underline transition-all hover:bg-[#124170]/50 hover:text-blue-300">
                   {s}
                 </a>
               ))}

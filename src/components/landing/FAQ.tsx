@@ -16,32 +16,32 @@ export default function FAQ() {
   ]
 
   return (
-    <section className="px-[5%] py-32 bg-[#124170]" id="faq">
-      <div className="max-w-[720px]">
-        <div className="inline-flex items-center gap-2 text-xs font-bold tracking-widest uppercase text-gold mb-4">
-          FAQ
-        </div>
-        <h2 className="font-heading text-[clamp(1.8rem,4vw,3rem)] font-extrabold text-white leading-tight tracking-tight mb-4.5">
-          Questions,<br />answered
+    <section className="px-[5%] py-28 bg-white" id="faq">
+      <div className="max-w-[1320px] mx-auto">
+        <div className="section-label">FAQ</div>
+        <h2 className="text-[clamp(1.75rem,3.5vw,2.75rem)] font-extrabold text-[#0f172a] leading-[1.15] tracking-[-0.025em] mb-14 max-w-[380px]">
+          Questions, answered
         </h2>
-      </div>
-      <div className="max-w-[720px] mx-auto mt-15">
-        {faqs.map((faq, i) => (
-          <div key={i} className={`border-b border-white/10 ${openFaq === i ? 'open' : ''}`}>
-            <button
-              className="w-full bg-none border-none text-left py-5 font-body text-base font-semibold text-white cursor-pointer flex items-center justify-between gap-4 transition-colors hover:text-gold"
-              onClick={() => setOpenFaq(openFaq === i ? null : i)}
-            >
-              {faq.q}
-              <span className={`w-6 h-6 rounded-full bg-white/10 flex items-center justify-center shrink-0 text-xs transition-all ${openFaq === i ? 'rotate-180 bg-gold text-navy' : 'text-white'}`}>
-                ▾
-              </span>
-            </button>
-            <div className={`overflow-hidden transition-all text-[0.92rem] text-white/80 leading-[1.7] ${openFaq === i ? 'max-h-[300px] pb-5' : 'max-h-0'}`}>
-              {faq.a}
+        <div className="max-w-[720px]">
+          {faqs.map((faq, i) => (
+            <div key={i} className="border-b border-[#f1f5f9]">
+              <button
+                className="w-full bg-transparent border-none text-left py-5 text-[0.925rem] font-semibold text-[#0f172a] cursor-pointer flex items-center justify-between gap-4 transition-colors hover:text-[#2563eb] outline-none"
+                onClick={() => setOpenFaq(openFaq === i ? null : i)}
+              >
+                {faq.q}
+                <span className={`w-7 h-7 rounded-full flex items-center justify-center shrink-0 text-xs transition-all ${openFaq === i ? 'bg-[#2563eb] text-white rotate-180' : 'bg-[#f1f5f9] text-[#64748b]'}`}>
+                  <svg className="w-3.5 h-3.5" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                    <polyline points="6 9 12 15 18 9"/>
+                  </svg>
+                </span>
+              </button>
+              <div className={`overflow-hidden transition-all text-[0.875rem] font-normal text-[#64748b] leading-[1.75] ${openFaq === i ? 'max-h-[300px] pb-5' : 'max-h-0'}`}>
+                {faq.a}
+              </div>
             </div>
-          </div>
-        ))}
+          ))}
+        </div>
       </div>
     </section>
   )

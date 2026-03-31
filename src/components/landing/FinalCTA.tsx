@@ -1,38 +1,30 @@
 export default function FinalCTA() {
-  const trustBadges = [
-    ['SSL Secured'],
-    ['No credit card required'],
-    ['30-day money back'],
-    ['4.8 Chrome Web Store']
-  ]
-
   return (
-    <section className="px-[5%] py-32 bg-linear-to-br from-navy-4 via-navy to-navy-2 text-center relative overflow-hidden">
-      <div className="absolute w-[600px] h-[600px] rounded-full bg-gold opacity-[0.08] blur-[120px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2" />
-      <div className="relative z-10 text-center">
-        <div className="inline-flex items-center gap-2 text-xs font-bold tracking-widest uppercase text-gold-2 mb-4 before:content-[''] before:block before:w-5 before:h-0.5 before:bg-gold before:rounded-sm justify-center">
-          Get Started
-        </div>
-        <h2 className="font-heading text-[clamp(1.8rem,4vw,3rem)] font-extrabold text-white leading-tight tracking-tight mb-4.5">
-          Ready to transform your<br />email communication?
-        </h2>
-        <p className="text-lg text-white/65 mb-10">
-          Join 10,000+ professionals who write better emails every day.
-        </p>
-        <div className="flex gap-3.5 justify-center flex-wrap mb-10">
-          <a href="#" className="bg-white text-navyblue text-[0.95rem] font-bold px-7 py-3.5 rounded-full border-none cursor-pointer no-underline inline-flex items-center gap-2 shadow-[0_6px_24px_rgba(255,255,255,0.3)] transition-all hover:-translate-y-0.5 hover:shadow-[0_10px_30px_rgba(255,255,255,0.4)] hover:bg-cream">
-            Add to Chrome — Free
-          </a>
-          <a href="#demo" className="bg-white/10 text-white text-[0.95rem] font-medium px-7 py-3.5 rounded-full border border-white/30 cursor-pointer no-underline inline-flex items-center gap-2 backdrop-blur-sm transition-all hover:bg-white/20 hover:border-white/50">
-            View Demo First
-          </a>
-        </div>
-        <div className="flex items-center justify-center gap-7 flex-wrap">
-          {trustBadges.map(([label]) => (
-            <div key={label} className="flex items-center gap-1.5 text-[0.82rem] text-white/50">
-              {label}
-            </div>
-          ))}
+    <section className="px-[5%] py-28 bg-[#f5f7ff] relative overflow-hidden">
+      <div className="absolute w-[500px] h-[500px] rounded-full bg-[#2563eb] opacity-[0.07] blur-[120px] top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
+      <div className="max-w-[1320px] mx-auto relative z-10">
+        {/* CTA card */}
+        <div className="card px-12 py-16 text-center max-w-[760px] mx-auto max-md:px-7 max-md:py-10">
+          <div className="section-label justify-center">Get Started</div>
+          <h2 className="text-[clamp(1.75rem,3.5vw,2.75rem)] font-extrabold text-[#0f172a] leading-[1.15] tracking-[-0.025em] mb-4">
+            Ready to transform your email communication?
+          </h2>
+          <p className="text-[1rem] font-normal text-[#475569] leading-[1.7] mb-9 max-w-[480px] mx-auto">
+            Join 10,000+ professionals who write better emails every day.
+          </p>
+          <div className="flex gap-3 justify-center flex-wrap mb-9">
+            <a href="#" className="bg-[#2563eb] text-white text-[0.9rem] font-semibold px-7 py-3.5 rounded-full border-none cursor-pointer no-underline inline-flex items-center gap-2 shadow-[0_4px_20px_rgba(37,99,235,0.38)] transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_28px_rgba(37,99,235,0.48)] hover:bg-[#1d4ed8]">
+              Add to Chrome — Free
+            </a>
+            <a href="#demo" className="bg-white text-[#334155] text-[0.9rem] font-medium px-7 py-3.5 rounded-full border border-[#e8ecf4] cursor-pointer no-underline inline-flex items-center gap-2 shadow-[0_2px_8px_rgba(0,0,0,0.05)] transition-all hover:border-[#2563eb]/40 hover:shadow-[0_4px_16px_rgba(37,99,235,0.1)]">
+              View Demo First
+            </a>
+          </div>
+          <div className="flex items-center justify-center gap-6 flex-wrap">
+            {['🔒 SSL Secured', 'No credit card required', '30-day money back', '⭐ 4.8 Chrome Web Store'].map(label => (
+              <div key={label} className="text-[0.78rem] font-medium text-[#94a3b8]">{label}</div>
+            ))}
+          </div>
         </div>
       </div>
     </section>

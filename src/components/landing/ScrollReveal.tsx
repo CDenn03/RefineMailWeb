@@ -14,9 +14,16 @@ export default function ScrollReveal() {
           }
         })
       },
-      { threshold: 0.12 }
+      { threshold: 0.05, rootMargin: '0px 0px -40px 0px' }
     )
-    reveals.forEach(el => observer.observe(el))
+    reveals.forEach(el => {
+      const rect = (el as HTMLElement).getBoundingClientRect()
+      if (rect.top < window.innerHeight) {
+        el.classList.add('visible')
+      } else {
+        observer.observe(el)
+      }
+    })
 
     return () => observer.disconnect()
   }, [])

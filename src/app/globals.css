@@ -2,33 +2,97 @@
 
 @layer theme {
   * {
-    --font-heading: 'Syne', sans-serif;
-    --font-body: 'DM Sans', sans-serif;
-    --font-mono: 'DM Mono', monospace;
+    --font-heading: 'Plus Jakarta Sans', sans-serif;
+    --font-body: 'Plus Jakarta Sans', sans-serif;
+    --font-mono: 'Inter', monospace;
     
-    --color-navy: #0f2a44;
-    --color-navy-2: #124170;
-    --color-navy-3: #1a5a8a;
-    --color-navy-4: #0a1e31;
+    /* Royal/Navy Blue palette */
+    --color-navy: #1a3a6b;
+    --color-navy-2: #2251a3;
+    --color-navy-3: #2d63c8;
+    --color-navy-4: #0f2654;
+    --color-royal: #2563eb;
+    --color-royal-2: #1d4ed8;
+    --color-royal-light: #eff6ff;
+    --color-royal-mid: #dbeafe;
+    
+    /* Light theme surfaces */
+    --color-surface: #ffffff;
+    --color-surface-2: #f5f7ff;
+    --color-surface-3: #eef1fb;
+    --color-border: #e8ecf4;
+    
+    /* Card style */
+    --card-bg: #ffffff;
+    --card-border: 1px solid #e8ecf4;
+    --card-radius: 20px;
+    --card-shadow: 0 2px 16px rgba(30, 58, 138, 0.06);
+    --card-shadow-hover: 0 8px 32px rgba(37, 99, 235, 0.13);
+
+    /* Accent colors */
     --color-cream: #f7f4ef;
     --color-cream-2: #ede9e2;
-    --color-gold: #c8a96e;
-    --color-gold-2: #e8cc96;
-    --color-teal: #14b8a6;
-    --color-teal-2: #0d9488;
+    --color-gold: #f59e0b;
+    --color-gold-2: #fbbf24;
+    --color-teal: #0ea5e9;
+    --color-teal-2: #0284c7;
     --color-orange: #f97316;
     --color-orange-2: #ea580c;
-    --color-sage: #4a8c6f;
-    --color-coral: #e05a3a;
-    --color-text-dark: #0d1b2a;
-    --color-text-mid: #3d5168;
-    --color-text-light: #7a8fa6;
+    --color-sage: #10b981;
+    --color-coral: #ef4444;
+    
+    /* Text */
+    --color-text-dark: #0f172a;
+    --color-text-mid: #334155;
+    --color-text-light: #64748b;
   }
 }
 
 @layer utilities {
   .text-navyblue {
-    color: #0f2a44;
+    color: #1a3a6b;
+  }
+
+  /* Reusable card class matching the image style */
+  .card {
+    background: var(--card-bg);
+    border: var(--card-border);
+    border-radius: var(--card-radius);
+    box-shadow: var(--card-shadow);
+    transition: box-shadow 0.2s ease, transform 0.2s ease;
+  }
+
+  .card:hover {
+    box-shadow: var(--card-shadow-hover);
+    transform: translateY(-3px);
+  }
+
+  /* Section label pill */
+  .section-label {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: #2563eb;
+    background: #eff6ff;
+    border: 1px solid #bfdbfe;
+    border-radius: 999px;
+    padding: 4px 12px;
+    margin-bottom: 20px;
+  }
+
+  /* Icon container — soft pastel square */
+  .icon-box {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 16px;
   }
 }
 
@@ -38,17 +102,19 @@ html {
 
 body {
   font-family: var(--font-body);
-  background: var(--color-navy);
-  color: white;
+  background: #f5f7ff;
+  color: #0f172a;
   overflow-x: hidden;
   -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
 }
 
 body::before {
   content: '';
   position: fixed;
   inset: 0;
-  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.02'/%3E%3C/svg%3E");
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.015'/%3E%3C/svg%3E");
   pointer-events: none;
   z-index: 999;
 }
@@ -122,19 +188,15 @@ body::before {
 }
 
 nav.scrolled {
-  background: rgba(15, 42, 68, 0.95);
+  background: rgba(255, 255, 255, 0.95);
   backdrop-filter: blur(16px);
-  box-shadow: 0 1px 0 rgba(255, 255, 255, 0.1);
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.08);
 }
 
-nav.scrolled a:not(.bg-white) {
+nav.scrolled a {
+  color: #0f172a !important;
+}
+
+nav.scrolled .nav-cta {
   color: white !important;
-}
-
-nav.scrolled .bg-white {
-  color: #0f2a44 !important;
-}
-
-nav.scrolled .text-white\/80 {
-  color: rgba(255, 255, 255, 0.8) !important;
 }

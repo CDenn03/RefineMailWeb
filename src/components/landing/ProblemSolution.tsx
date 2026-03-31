@@ -14,41 +14,62 @@ export default function ProblemSolution() {
   ]
 
   return (
-    <section className="px-[5%] py-32 bg-[#0a1e31]" id="why">
-      <div className="inline-flex items-center gap-2 text-xs font-bold tracking-widest uppercase text-gold mb-4 ">
-        The Problem
-      </div>
-      <h2 className="font-heading text-[clamp(1.8rem,4vw,3rem)] font-extrabold text-white leading-tight tracking-tight mb-4.5">
-        Email writing is<br />surprisingly hard
-      </h2>
-      <div className="grid grid-cols-2 gap-15 mt-15 max-lg:grid-cols-1">
-        <div>
-          <div className="font-heading text-lg font-bold mb-7 pb-3.5 border-b-2 border-coral text-coral">
-            The Struggle
-          </div>
-          {problems.map(([title, desc], i) => (
-            <div key={i} className={`flex gap-3.5 items-start mb-5 reveal ${i > 0 ? `reveal-delay-${i}` : ''}`}>
-              <div className="w-2 h-2 rounded-full bg-coral mt-2 shrink-0" />
-              <div>
-                <strong className="block text-[0.95rem] font-semibold text-white mb-0.5">{title}</strong>
-                <p className="text-[0.95rem] text-white/80 leading-relaxed">{desc}</p>
+    <section className="px-[5%] py-28 bg-[#f5f7ff]" id="why">
+      <div className="max-w-[1320px] mx-auto">
+        <div className="section-label">The Problem</div>
+        <h2 className="text-[clamp(1.75rem,3.5vw,2.75rem)] font-extrabold text-[#0f172a] leading-[1.15] tracking-[-0.025em] mb-14 max-w-[480px]">
+          Email writing is surprisingly hard
+        </h2>
+        <div className="grid grid-cols-2 gap-6 max-lg:grid-cols-1">
+          {/* Problems card */}
+          <div className="card px-7 py-8">
+            <div className="flex items-center gap-2.5 mb-6">
+              <div className="w-8 h-8 rounded-[10px] bg-red-50 flex items-center justify-center">
+                <svg className="w-4 h-4 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
+                </svg>
               </div>
+              <span className="text-[0.875rem] font-bold text-red-500 tracking-[-0.01em]">The Struggle</span>
             </div>
-          ))}
-        </div>
-        <div>
-          <div className="font-heading text-lg font-bold mb-7 pb-3.5 border-b-2 border-sage text-sage">
-            The Solution
+            <div className="flex flex-col gap-4">
+              {problems.map(([title, desc], i) => (
+                <div key={i} className={`flex gap-3 items-start reveal ${i > 0 ? `reveal-delay-${i}` : ''}`}>
+                  <div className="w-5 h-5 rounded-full bg-red-50 border border-red-200 flex items-center justify-center shrink-0 mt-0.5">
+                    <div className="w-1.5 h-1.5 rounded-full bg-red-400" />
+                  </div>
+                  <div>
+                    <div className="text-[0.875rem] font-semibold text-[#0f172a] mb-0.5">{title}</div>
+                    <p className="text-[0.825rem] font-normal text-[#64748b] leading-[1.6]">{desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
           </div>
-          {solutions.map(([title, desc], i) => (
-            <div key={i} className={`flex gap-3.5 items-start mb-5 reveal ${i > 0 ? `reveal-delay-${i}` : ''}`}>
-              <div className="w-2 h-2 rounded-full bg-sage mt-2 shrink-0" />
-              <div>
-                <strong className="block text-[0.95rem] font-semibold text-white mb-0.5">{title}</strong>
-                <p className="text-[0.95rem] text-white/80 leading-relaxed">{desc}</p>
+
+          {/* Solutions card */}
+          <div className="card px-7 py-8">
+            <div className="flex items-center gap-2.5 mb-6">
+              <div className="w-8 h-8 rounded-[10px] bg-emerald-50 flex items-center justify-center">
+                <svg className="w-4 h-4 text-emerald-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
+                  <polyline points="20 6 9 17 4 12"/>
+                </svg>
               </div>
+              <span className="text-[0.875rem] font-bold text-emerald-600 tracking-[-0.01em]">The Solution</span>
             </div>
-          ))}
+            <div className="flex flex-col gap-4">
+              {solutions.map(([title, desc], i) => (
+                <div key={i} className={`flex gap-3 items-start reveal ${i > 0 ? `reveal-delay-${i}` : ''}`}>
+                  <div className="w-5 h-5 rounded-full bg-emerald-50 border border-emerald-200 flex items-center justify-center shrink-0 mt-0.5">
+                    <div className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
+                  </div>
+                  <div>
+                    <div className="text-[0.875rem] font-semibold text-[#0f172a] mb-0.5">{title}</div>
+                    <p className="text-[0.825rem] font-normal text-[#64748b] leading-[1.6]">{desc}</p>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
         </div>
       </div>
     </section>

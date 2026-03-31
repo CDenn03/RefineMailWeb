@@ -25,8 +25,8 @@ export default function Home() {
       <Navigation />
       <Hero />
       {/* <Stats /> */}
-      <StyleDemo />
       <ProblemSolution />
+      <StyleDemo />
       <HowItWorks />
       <Features />
       <UseCases />

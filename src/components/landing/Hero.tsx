@@ -19,8 +19,9 @@ export default function Hero() {
           </p>
 
           <div className="flex gap-3 flex-wrap mb-8 animate-fadeInUp [animation-delay:0.3s] max-lg:justify-center max-md:gap-2.5 max-md:mb-6">
-            <a href="#" className="bg-[#0f2a44] text-white text-[0.9rem] font-semibold px-6 py-3 rounded-full border-none cursor-pointer no-underline inline-flex items-center gap-2 shadow-[0_4px_20px_rgba(15,42,68,0.38)] transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_28px_rgba(15,42,68,0.48)] hover:bg-[#124170] max-md:text-[0.85rem] max-md:px-5">
-              Coming soon to Chrome
+            <a href="https://github.com/CDenn03/RefineMail" target="_blank" rel="noopener noreferrer" className="bg-[#0f2a44] text-white text-[0.9rem] font-semibold px-6 py-3 rounded-full border-none cursor-pointer no-underline inline-flex items-center gap-2 shadow-[0_4px_20px_rgba(15,42,68,0.38)] transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_28px_rgba(15,42,68,0.48)] hover:bg-[#124170] max-md:text-[0.85rem] max-md:px-5">
+              Get Early Access
+              <span className="bg-white/20 text-white text-[0.65rem] font-bold px-1.5 py-0.5 rounded-full tracking-wide">FREE</span>
             </a>
             <a href="#demo" className="bg-white text-[#334155] text-[0.9rem] font-medium px-6 py-3 rounded-full border border-[#dde3ea] cursor-pointer no-underline inline-flex items-center gap-2 shadow-[0_2px_8px_rgba(0,0,0,0.05)] transition-all hover:border-[#124170]/40 hover:shadow-[0_4px_16px_rgba(18,65,112,0.1)] max-md:text-[0.85rem] max-md:px-5">
               See it in action →

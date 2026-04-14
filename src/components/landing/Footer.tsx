@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 export default function Footer() {
   const footerLinks = [
     ['Product', ['Features', 'Pricing', 'Demo', 'FAQ', 'Changelog']],
@@ -10,21 +12,23 @@ export default function Footer() {
       <div className="max-w-[1320px] mx-auto">
         <div className="grid grid-cols-[2fr_1fr_1fr_1fr] gap-12 mb-12 max-lg:grid-cols-2 max-md:grid-cols-1">
           <div>
-            <a href="#" className="flex items-center gap-2.5 font-extrabold text-[1rem] text-white tracking-tight no-underline mb-4 w-fit" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
-              <div className="w-8 h-8 bg-[#0f2a44] rounded-[10px] flex items-center justify-center shadow-[0_2px_8px_rgba(15,42,68,0.4)]">
-                <svg className="w-4 h-4 text-white" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z"/>
-                  <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z"/>
-                </svg>
-              </div>
+            <a href="#" className="flex items-center gap-2.5 font-extrabold text-[1.25rem] text-white/80 tracking-tight no-underline" style={{ fontFamily: 'Plus Jakarta Sans, sans-serif' }}>
+              <Image
+                src="/RefineEmailLogo.webp"
+                alt="AI Email Refiner logo"
+                width={40}
+                height={40}
+                className="rounded-[10px]"
+                priority
+              />
               AI Email Refiner
             </a>
-            <p className="text-[0.85rem] font-normal text-white/40 leading-[1.7] max-w-[240px] mb-6">
+            <p className="text-[0.85rem] font-normal text-white/75 leading-[1.7] max-w-[240px] mb-6">
               AI-powered email writing for professionals who value their time and reputation.
             </p>
             <div className="flex gap-2">
               {['X', 'in', 'f', '▶'].map((s, i) => (
-                <a key={i} href="#" className="w-8 h-8 bg-white/[0.07] rounded-lg flex items-center justify-center text-[0.8rem] text-white/40 cursor-pointer no-underline transition-all hover:bg-[#124170]/50 hover:text-blue-300">
+                <a key={i} href="#" className="w-8 h-8 bg-white/[0.07] rounded-lg flex items-center justify-center text-[0.8rem] text-white/60 cursor-pointer no-underline transition-all hover:bg-[#124170]/50 hover:text-blue-300">
                   {s}
                 </a>
               ))}
@@ -32,13 +36,13 @@ export default function Footer() {
           </div>
           {footerLinks.map(([title, links]) => (
             <div key={title as string}>
-              <div className="text-[0.72rem] font-bold tracking-widest uppercase text-[#475569] mb-5">
+              <div className="text-[0.72rem] font-bold tracking-widest uppercase text-white/40 mb-5">
                 {title}
               </div>
               <ul className="list-none flex flex-col gap-3">
                 {(links as string[]).map(l => (
                   <li key={l}>
-                    <a href="#" className="text-[0.85rem] font-normal text-white/40 no-underline transition-colors hover:text-white/75">
+                    <a href="#" className="text-[0.85rem] font-normal text-white/75 no-underline transition-colors hover:text-white/75">
                       {l}
                     </a>
                   </li>

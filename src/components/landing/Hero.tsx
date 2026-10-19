@@ -2,45 +2,37 @@ import EmailDemo from "../EmailDemo";
 
 export default function Hero() {
   return (
-    <section className="min-h-[calc(100vh-64px)] flex items-center px-[5%] pt-[110px] pb-20 relative overflow-hidden bg-white max-md:pt-[96px]" id="hero">
-      {/* Soft background blobs */}
-      <div className="absolute w-[640px] h-[640px] rounded-full blur-[140px] opacity-20 pointer-events-none bg-[#124170] top-[-180px] right-[-120px] animate-float1" />
-      <div className="absolute w-[380px] h-[380px] rounded-full blur-[100px] opacity-10 pointer-events-none bg-[#0f2a44] bottom-[-80px] left-[-60px] animate-float2" />
-      
-      <div className="relative z-10 w-full max-w-[1320px] mx-auto grid grid-cols-2 gap-16 items-center max-lg:grid-cols-1 max-lg:gap-10">
-        <div className="max-lg:text-center">
-          <h1 className="text-[clamp(2.6rem,6vw,4.1rem)] font-extrabold text-[#0f172a] leading-[1.08] tracking-[-0.03em] mb-5 animate-fadeInUp [animation-delay:0.1s]">
-            Stop Rewriting Emails.<br />
-            Start <span className="text-[#124170]">Refining</span> Them.
+    <section id="hero" className="border-b border-[#cbd5e1] bg-white px-[5%] pt-[132px] pb-18 max-md:pt-[104px]">
+      <div className="mx-auto grid w-full max-w-[1320px] items-center gap-12 lg:grid-cols-[0.88fr_1.12fr] lg:gap-16">
+        <div>
+          <p className="section-label">Email drafting, with a review step</p>
+          <h1 className="mb-6 max-w-[630px] text-[clamp(2.7rem,5.4vw,4.65rem)] font-extrabold leading-[1.02] tracking-[-0.055em] text-[#0f172a]">
+            Write the message. <span className="text-[#124170]">Control the tone.</span>
           </h1>
-
-          <p className="text-[clamp(0.95rem,1.8vw,1.1rem)] font-normal text-[#475569] leading-[1.75] mb-9 animate-fadeInUp [animation-delay:0.2s] max-md:mb-7">
-            Turn one draft into perfectly-toned messages in seconds. From formal authority to casual warmth, AI Email Refiner adapts your message for any situation.
+          <p className="mb-8 max-w-[570px] text-[1rem] leading-[1.75] text-[#475569] md:text-[1.1rem]">
+            RefineMail is an open-source browser extension for drafting clearer emails in Gmail and Zimbra. Choose a writing style, review the revision, then decide whether to apply it.
           </p>
-
-          <div className="flex gap-3 flex-wrap mb-8 animate-fadeInUp [animation-delay:0.3s] max-lg:justify-center max-md:gap-2.5 max-md:mb-6">
-            <a href="https://github.com/CDenn03/RefineMail" target="_blank" rel="noopener noreferrer" className="bg-[#0f2a44] text-white text-[0.9rem] font-semibold px-6 py-3 rounded-full border-none cursor-pointer no-underline inline-flex items-center gap-2 shadow-[0_4px_20px_rgba(15,42,68,0.38)] transition-all hover:-translate-y-0.5 hover:shadow-[0_8px_28px_rgba(15,42,68,0.48)] hover:bg-[#124170] max-md:text-[0.85rem] max-md:px-5">
-              Get Early Access
-              <span className="bg-white/20 text-white text-[0.65rem] font-bold px-1.5 py-0.5 rounded-full tracking-wide">FREE</span>
+          <div className="flex flex-wrap gap-3 max-md:flex-col max-md:items-start">
+            <a
+              href="https://github.com/CDenn03/RefineMail"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex min-h-12 items-center border border-[#0f2a44] bg-[#0f2a44] px-5 text-[0.875rem] font-bold text-white no-underline hover:bg-[#124170]"
+            >
+              View the source →
             </a>
-            <a href="#demo" className="bg-white text-[#334155] text-[0.9rem] font-medium px-6 py-3 rounded-full border border-[#dde3ea] cursor-pointer no-underline inline-flex items-center gap-2 shadow-[0_2px_8px_rgba(0,0,0,0.05)] transition-all hover:border-[#124170]/40 hover:shadow-[0_4px_16px_rgba(18,65,112,0.1)] max-md:text-[0.85rem] max-md:px-5">
-              See it in action →
+            <a href="#demo" className="inline-flex min-h-12 items-center border border-[#94a3b8] bg-white px-5 text-[0.875rem] font-bold text-[#334155] no-underline hover:border-[#124170] hover:text-[#124170]">
+              Review the workflow
             </a>
           </div>
-
-          <div className="flex items-center gap-6 flex-wrap animate-fadeInUp [animation-delay:0.4s] max-lg:justify-center max-md:gap-4">
-            <div className="flex items-center gap-1.5 text-[0.82rem] font-medium text-[#64748b]">
-              <span className="text-amber-400">★★★★★</span> 4.8 Rating
-            </div>
-            <span className="text-[#cbd5e1]">|</span>
-            <div className="text-[0.82rem] font-medium text-[#64748b]">10,000+ Users</div>
-            <span className="text-[#cbd5e1]">|</span>
-            <div className="text-[0.82rem] font-medium text-[#64748b]">🔒 Privacy First</div>
-          </div>
+          <dl className="mt-10 grid max-w-[560px] grid-cols-3 gap-4 border-t border-[#cbd5e1] pt-4 max-md:grid-cols-1">
+            <div><dt className="text-[0.68rem] font-extrabold tracking-[0.11em] text-[#64748b] uppercase">Works in</dt><dd className="mt-1 text-[0.84rem] font-semibold text-[#0f172a]">Gmail and Zimbra</dd></div>
+            <div><dt className="text-[0.68rem] font-extrabold tracking-[0.11em] text-[#64748b] uppercase">Control</dt><dd className="mt-1 text-[0.84rem] font-semibold text-[#0f172a]">Review before apply</dd></div>
+            <div><dt className="text-[0.68rem] font-extrabold tracking-[0.11em] text-[#64748b] uppercase">Project</dt><dd className="mt-1 text-[0.84rem] font-semibold text-[#0f172a]">Open source</dd></div>
+          </dl>
         </div>
-
         <EmailDemo />
       </div>
     </section>
-  )
+  );
 }

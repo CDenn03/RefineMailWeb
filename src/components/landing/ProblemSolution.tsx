@@ -1,77 +1,40 @@
 export default function ProblemSolution() {
   const problems = [
-    ['Hours lost every week', 'The average professional spends 2.6 hours a day on email. Much of that is re-reading and rewriting.'],
-    ['Tone anxiety is real', 'Worrying whether an email sounds too harsh, too casual, or unclear — leading to long editing sessions.'],
-    ['Endless rewriting cycles', 'Drafting, deleting, starting over. The same message rewritten five times before you hit send.'],
-    ['Cross-cultural missteps', 'Remote teams and global clients demand different communication styles that are hard to navigate.'],
-  ]
+    ["Tone is contextual", "A message to a client, manager, or teammate needs a different level of formality and detail."],
+    ["Drafts can lose the point", "Re-reading and rewriting can bury the actual request, context, or next step."],
+    ["High-stakes messages need care", "An apology, follow-up, or escalation benefits from a deliberate second pass before sending."],
+    ["The sender stays accountable", "A rewrite is useful only when the person sending it can inspect and change it."],
+  ];
 
   const solutions = [
-    ['Instant AI transformation', 'One click refines your draft into a polished, professional message in any style you choose.'],
-    ['7 styles at your fingertips', 'From formal board communications to friendly check-ins — match your tone perfectly every time.'],
-    ['Preview before applying', 'See exactly how your email will read before applying the changes. Full control, zero surprises.'],
-    ['Culturally intelligent writing', 'AI that understands communication nuances across professional and cultural contexts.'],
-  ]
+    ["Choose an intended tone", "Select a writing style that gives the revision a clear communication goal."],
+    ["Keep the original visible", "The workflow starts from the existing draft instead of asking you to start over."],
+    ["Review the revision", "Compare the proposed wording before it replaces any text in the compose window."],
+    ["Apply only when it is right", "Use the revised text as a starting point, edit it further, or keep the original."],
+  ];
 
   return (
-    <section className="px-[5%] py-28 bg-[#f5f6f8]" id="why">
-      <div className="max-w-[1320px] mx-auto">
-        <div className="section-label">The Problem</div>
-        <h2 className="text-[clamp(1.75rem,3.5vw,2.75rem)] font-extrabold text-[#0f172a] leading-[1.15] tracking-[-0.025em] mb-14 max-w-[480px]">
-          Email writing is surprisingly hard
+    <section className="bg-[#f5f6f8] px-[5%] py-24" id="why">
+      <div className="mx-auto max-w-[1320px]">
+        <p className="section-label">The product decision</p>
+        <h2 className="mb-12 max-w-[650px] text-[clamp(2rem,4vw,3.35rem)] font-extrabold leading-[1.08] tracking-[-0.045em] text-[#0f172a]">
+          A revision should make the next sentence clearer, not make the sender disappear.
         </h2>
-        <div className="grid grid-cols-2 gap-6 max-lg:grid-cols-1">
-          {/* Problems card */}
-          <div className="card px-7 py-8">
-            <div className="flex items-center gap-2.5 mb-6">
-              <div className="w-8 h-8 rounded-[10px] bg-red-50 flex items-center justify-center">
-                <svg className="w-4 h-4 text-red-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/>
-                </svg>
-              </div>
-              <span className="text-[0.875rem] font-bold text-red-500 tracking-[-0.01em]">The Struggle</span>
+        <div className="grid gap-10 lg:grid-cols-2 lg:gap-16">
+          <article className="border-t border-[#94a3b8] pt-5">
+            <p className="mb-6 text-[0.72rem] font-extrabold tracking-[0.11em] text-[#64748b] uppercase">What gets in the way</p>
+            <div className="divide-y divide-[#cbd5e1]">
+              {problems.map(([title, description]) => <div key={title} className="py-4"><h3 className="text-[0.94rem] font-bold text-[#0f172a]">{title}</h3><p className="mt-1 text-[0.875rem] leading-[1.65] text-[#64748b]">{description}</p></div>)}
             </div>
-            <div className="flex flex-col gap-4">
-              {problems.map(([title, desc], i) => (
-                <div key={i} className={`flex gap-3 items-start reveal ${i > 0 ? `reveal-delay-${i}` : ''}`}>
-                  <div className="w-5 h-5 rounded-full bg-red-50 border border-red-200 flex items-center justify-center shrink-0 mt-0.5">
-                    <div className="w-1.5 h-1.5 rounded-full bg-red-400" />
-                  </div>
-                  <div>
-                    <div className="text-[0.875rem] font-semibold text-[#0f172a] mb-0.5">{title}</div>
-                    <p className="text-[0.825rem] font-normal text-[#64748b] leading-[1.6]">{desc}</p>
-                  </div>
-                </div>
-              ))}
+          </article>
+          <article className="border-t border-[#0f2a44] pt-5">
+            <p className="mb-6 text-[0.72rem] font-extrabold tracking-[0.11em] text-[#124170] uppercase">How RefineMail responds</p>
+            <div className="divide-y divide-[#cbd5e1]">
+              {solutions.map(([title, description]) => <div key={title} className="py-4"><h3 className="text-[0.94rem] font-bold text-[#0f172a]">{title}</h3><p className="mt-1 text-[0.875rem] leading-[1.65] text-[#64748b]">{description}</p></div>)}
             </div>
-          </div>
-
-          {/* Solutions card */}
-          <div className="card px-7 py-8">
-            <div className="flex items-center gap-2.5 mb-6">
-              <div className="w-8 h-8 rounded-[10px] bg-emerald-50 flex items-center justify-center">
-                <svg className="w-4 h-4 text-emerald-500" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round">
-                  <polyline points="20 6 9 17 4 12"/>
-                </svg>
-              </div>
-              <span className="text-[0.875rem] font-bold text-emerald-600 tracking-[-0.01em]">The Solution</span>
-            </div>
-            <div className="flex flex-col gap-4">
-              {solutions.map(([title, desc], i) => (
-                <div key={i} className={`flex gap-3 items-start reveal ${i > 0 ? `reveal-delay-${i}` : ''}`}>
-                  <div className="w-5 h-5 rounded-full bg-emerald-50 border border-emerald-200 flex items-center justify-center shrink-0 mt-0.5">
-                    <div className="w-1.5 h-1.5 rounded-full bg-emerald-500" />
-                  </div>
-                  <div>
-                    <div className="text-[0.875rem] font-semibold text-[#0f172a] mb-0.5">{title}</div>
-                    <p className="text-[0.825rem] font-normal text-[#64748b] leading-[1.6]">{desc}</p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
+          </article>
         </div>
       </div>
     </section>
-  )
+  );
 }

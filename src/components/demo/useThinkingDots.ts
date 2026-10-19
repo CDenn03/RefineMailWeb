@@ -4,15 +4,14 @@ export const useThinkingDots = (active: boolean) => {
   const [dots, setDots] = useState("");
 
   useEffect(() => {
-    if (!active) {
-      setDots("");
-      return;
-    }
+    if (!active) return;
+
     const interval = setInterval(() => {
-      setDots((prev) => (prev.length >= 3 ? "" : prev + "."));
+      setDots((previous) => (previous.length >= 3 ? "" : previous + "."));
     }, 400);
+
     return () => clearInterval(interval);
   }, [active]);
 
-  return dots;
+  return active ? dots : "";
 };

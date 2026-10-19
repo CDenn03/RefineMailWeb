@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import { useEmailDemo } from "./demo/useEmailDemo";
 import { useThinkingDots } from "./demo/useThinkingDots";
 import { STYLES } from "./demo/demoData";
@@ -8,102 +7,47 @@ import { STYLES } from "./demo/demoData";
 const EmailDemo = () => {
   const { demo, styleIndex, typedInput, output, phase } = useEmailDemo();
   const dots = useThinkingDots(phase === "thinking");
+  const hasRevision = phase === "output" && output.trim().length > 0;
 
   return (
-    <div className="animate-fadeInUp [animation-delay:0.5s] max-lg:max-w-[600px] max-lg:mx-auto">
-      <div className="bg-white rounded-[20px] overflow-hidden shadow-[0_8px_40px_rgba(15,42,68,0.1)] border border-[#dde3ea]">
+    <section aria-label="Illustrative RefineMail workflow" className="border border-[#cbd5e1] bg-white">
+      <header className="flex items-center justify-between border-b border-[#cbd5e1] bg-[#f5f6f8] px-4 py-3">
+        <span className="text-[0.68rem] font-extrabold tracking-[0.11em] text-[#475569] uppercase">Illustrative workflow</span>
+        <span className="text-[0.72rem] font-semibold text-[#124170]">Review before apply</span>
+      </header>
 
-        {/* Window chrome */}
-        <div className="bg-[#f5f6f8] px-4 py-3 flex items-center gap-3 border-b border-[#dde3ea] max-md:px-3 max-md:py-2">
-          <div className="flex gap-1.5">
-            <div className="w-2.5 h-2.5 rounded-full bg-[#ff5f57] max-md:w-2 max-md:h-2" />
-            <div className="w-2.5 h-2.5 rounded-full bg-[#ffbd2e] max-md:w-2 max-md:h-2" />
-            <div className="w-2.5 h-2.5 rounded-full bg-[#28ca42] max-md:w-2 max-md:h-2" />
-          </div>
-          <div className="flex-1 bg-white rounded-md px-3 py-1 text-[0.7rem] text-[#94a3b8] border border-[#dde3ea] text-center">
-            mail.google.com
+      <div className="grid min-h-[360px] grid-cols-[1fr_280px] max-md:grid-cols-1">
+        <div className="p-5 max-md:p-4">
+          <p className="mb-3 text-[0.72rem] font-extrabold tracking-[0.1em] text-[#c5221f] uppercase">Original draft</p>
+          <div className="border border-[#cbd5e1]">
+            <div className="border-b border-[#cbd5e1] bg-[#334155] px-3.5 py-2.5 text-[0.72rem] font-semibold text-white">New message</div>
+            <div className="border-b border-[#e2e8f0] px-3 py-2 text-[0.75rem] text-[#64748b]">To: sarah@company.com</div>
+            <div className="border-b border-[#e2e8f0] px-3 py-2 text-[0.75rem] text-[#64748b]">Subject: {demo.subject}</div>
+            <div className="min-h-[132px] whitespace-pre-wrap p-3 text-[0.78rem] leading-relaxed text-[#334155]">
+              {typedInput}
+              {phase === "typing" && <span className="animate-blink ml-px inline-block h-[1em] w-px bg-[#334155] align-middle" />}
+            </div>
           </div>
         </div>
 
-        <div className="grid grid-cols-[1fr_300px] min-h-[340px] max-md:grid-cols-1 max-md:min-h-auto">
-
-          {/* Left — email compose */}
-          <div className="bg-white p-5 max-md:p-3">
-            <span
-              className="font-bold text-[0.875rem] text-[#c5221f] mb-4 block max-md:text-[0.8rem] max-md:mb-2"
-              style={{ fontFamily: "Plus Jakarta Sans, sans-serif" }}
-            >
-              Compose Email
-            </span>
-            <div className="bg-white rounded-[12px] shadow-[0_2px_12px_rgba(0,0,0,0.08)] overflow-hidden border border-[#dde3ea]">
-              <div className="bg-[#334155] text-white px-3.5 py-2.5 text-[0.72rem] font-semibold max-md:px-2 max-md:py-1.5 max-md:text-[0.65rem]">
-                New Message
-              </div>
-              <div className="border-b border-[#f1f5f9] px-3 py-1.5 text-[0.75rem] text-[#64748b] max-md:px-2 max-md:py-1 max-md:text-[0.65rem]">
-                To: sarah@company.com
-              </div>
-              <div className="border-b border-[#f1f5f9] px-3 py-1.5 text-[0.75rem] text-[#64748b] max-md:px-2 max-md:py-1 max-md:text-[0.65rem]">
-                Subject: {demo.subject}
-              </div>
-              <div className="p-3 text-[0.78rem] text-[#334155] min-h-[100px] leading-relaxed whitespace-pre-wrap max-md:p-2 max-md:text-[0.7rem] max-md:min-h-[80px]">
-                {typedInput}
-                {phase === "typing" && (
-                  <span className="animate-blink inline-block w-px h-[1em] bg-[#334155] ml-px align-middle" />
-                )}
-              </div>
-            </div>
+        <div className="border-l border-[#cbd5e1] bg-[#0f2a44] p-5 text-white max-md:border-t max-md:border-l-0 max-md:p-4">
+          <p className="mb-3 text-[0.68rem] font-extrabold tracking-[0.11em] text-blue-200 uppercase">RefineMail revision</p>
+          <div className="mb-4 border-y border-white/20 py-2 text-[0.72rem] leading-relaxed text-white/75">
+            <span className="font-bold text-white">Style: </span>{STYLES[styleIndex]}
           </div>
-
-          {/* Right — AI panel */}
-          <div className="bg-linear-to-b from-[#0f2a44] to-[#0a1e30] p-5 text-white max-md:p-3">
-            <div
-              className="text-[0.68rem] font-bold tracking-widest uppercase text-blue-300 mb-3.5 max-md:text-[0.65rem] max-md:mb-2"
-              style={{ fontFamily: "Plus Jakarta Sans, sans-serif" }}
-            >
-              AI EMAIL REFINER
-            </div>
-
-            {/* Style pills */}
-            <div className="flex flex-wrap gap-1.5 mb-4 max-md:gap-1 max-md:mb-3">
-              {STYLES.map((s, i) => (
-                <div
-                  key={s}
-                  className={`px-2.5 py-1 rounded-full text-[0.68rem] font-semibold border transition-all duration-300 max-md:px-2 max-md:py-0.5 max-md:text-[0.6rem] ${
-                    i === styleIndex
-                      ? "bg-[#124170] border-[#1a5a8a] text-white scale-105 shadow-[0_0_8px_rgba(18,65,112,0.6)]"
-                      : "border-white/20 text-white/50"
-                  }`}
-                >
-                  {s}
-                </div>
-              ))}
-            </div>
-
-            {/* Output box */}
-            <div className="bg-white/8 border border-white/12 rounded-[10px] p-3 text-[0.72rem] leading-relaxed text-white/85 mb-3 min-h-[110px] whitespace-pre-wrap max-md:p-2 max-md:text-[0.65rem] max-md:min-h-[80px] max-md:mb-2">
-              {phase === "thinking" && (
-                <span className="text-blue-300 italic">
-                  Thinking{dots}
-                </span>
-              )}
-              {phase === "output" && (
-                <>
-                  {output}
-                  <span className="animate-blink inline-block w-px h-[1em] bg-white/70 ml-px align-middle" />
-                </>
-              )}
-            </div>
-
-            <button
-              className="w-full bg-[#124170] text-white border-none rounded-[10px] px-2.5 py-2.5 text-[0.72rem] font-bold cursor-pointer hover:bg-[#1a5a8a] transition-colors shadow-[0_2px_10px_rgba(15,42,68,0.4)] max-md:py-2 max-md:text-[0.65rem]"
-              style={{ fontFamily: "Plus Jakarta Sans, sans-serif" }}
-            >
-              Apply to Email
-            </button>
+          <div className="mb-4 min-h-[136px] whitespace-pre-wrap border border-white/20 bg-white/5 p-3 text-[0.72rem] leading-relaxed text-white/90">
+            {hasRevision ? <>{output}<span className="animate-blink ml-px inline-block h-[1em] w-px bg-white/70 align-middle" /></> : <span className="text-white/70">{phase === "thinking" ? `Preparing revision${dots}` : "Preparing a revision for review…"}</span>}
           </div>
+          <button
+            type="button"
+            disabled={!hasRevision}
+            className={`min-h-10 w-full border px-3 text-[0.75rem] font-extrabold ${hasRevision ? "border-white bg-white text-[#0f2a44] hover:bg-[#d6e4f0]" : "cursor-not-allowed border-white/25 bg-transparent text-white/50"}`}
+          >
+            Apply revision
+          </button>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

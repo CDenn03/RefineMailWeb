@@ -6,13 +6,12 @@ export default function FAQ() {
   const [openFaq, setOpenFaq] = useState<number | null>(null)
 
   const faqs = [
-    { q: 'How does AI Email Refiner work?', a: 'AI Email Refiner is a Chrome extension that integrates directly into your Gmail or Zimbra compose window. When you click "Refine," it sends your email draft to OpenAI\'s API along with your chosen style preference. The AI rewrites your email and shows you a preview. You can apply it with one click or dismiss it.' },
-    { q: 'Is my email data secure and private?', a: 'Your privacy is our top priority. Email content is sent directly to OpenAI\'s API for real-time processing and is never stored on our servers. All transmissions are encrypted with SSL.' },
-    { q: 'Which email platforms are supported?', a: 'Currently, AI Email Refiner supports Gmail and Zimbra. We\'re actively working on Outlook support.' },
-    { q: 'Can I customize the AI\'s output?', a: 'Yes! Pro users can add custom instructions to guide the AI — specify length, tone details, recipient context, or any other requirement.' },
-    { q: "What's the difference between Free and Pro?", a: 'Free gives you 50 refinements/month with all 7 styles. Pro gives you unlimited refinements, priority processing, custom instructions, and advanced customization.' },
-    { q: 'Can I cancel anytime?', a: 'Absolutely. No long-term commitments. Cancel from your account settings anytime and your plan stays active until end of billing period.' },
-    { q: 'Do you offer refunds?', a: 'Yes — 30-day money-back guarantee on all paid plans. Contact support within 30 days for a full refund, no questions asked.' },
+    { q: 'How does RefineMail work?', a: 'RefineMail is a Chrome extension that integrates directly into Gmail or Zimbra compose windows. When you choose to refine a draft, it sends the text and selected style preference to OpenAI\'s API, then presents a revised version for review. You can apply it with one click or dismiss it.' },
+    { q: 'What happens to my email draft?', a: 'The selected draft text and writing instruction are sent to OpenAI\'s API for processing. Review the project configuration and the API provider\'s terms before using the extension with sensitive information.' },
+    { q: 'Which email platforms are supported?', a: 'The current extension supports Gmail and Zimbra compose windows.' },
+    { q: 'Can I customise the revision?', a: 'Choose from the available writing styles and provide additional instructions when you need to set context, length, recipient expectations, or a desired outcome.' },
+    { q: 'Do I have to use the suggested revision?', a: 'No. RefineMail keeps the decision with the sender: inspect the proposal, edit it further, dismiss it, or apply it only when it is suitable.' },
+    { q: 'Is RefineMail a hosted subscription service?', a: 'No. The public project is open source. Review the repository instructions to configure and load the extension locally with your own API key.' },
   ]
 
   return (

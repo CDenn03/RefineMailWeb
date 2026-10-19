@@ -162,8 +162,8 @@ export default function StyleDemo() {
                 </span>
               </span>
 
-              <button className="bg-[#0f2a44] text-white text-[0.8rem] font-semibold px-4 py-2 rounded-full shadow hover:bg-[#124170] transition">
-                Apply to Email
+              <button type="button" className="min-h-10 border border-[#0f2a44] bg-[#0f2a44] px-4 text-[0.8rem] font-bold text-white hover:bg-[#124170]">
+                Apply revision
               </button>
             </div>
           </div>
